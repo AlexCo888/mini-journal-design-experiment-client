@@ -9,7 +9,9 @@ const CardList = () => {
   }, []);
 
   const getData = async () => {
-    const response = await fetch("http://localhost:5000/data");
+    const response = await fetch(
+      "https://journal-experiment-full-stack.herokuapp.com/data"
+    );
     const jsonData = await response.json();
     setData(jsonData.data);
   };
